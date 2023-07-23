@@ -20,22 +20,12 @@ class MainActivity : Activity() {
         }
         val py = Python.getInstance()
         setupPythonWebView(py, mainPresenter)
-        tryStartMain(py)
+        startMain(py)
     }
 
-    private fun tryStartMain(py: Python) {
-        val pyMain = py.getModule("main")
-        try {
-            pyMain.callAttr("main")
-        } catch (e: Exception) {
-            if (e.toString().contains("has no attribute 'main'")) {
-                Toast.makeText(
-                    this, "Python module must have 'main' method.", Toast.LENGTH_LONG
-                ).show()
-            } else {
-                throw e
-            }
-        }
+    private fun startMain(py: Python) {
+        val runpy = py.getModule("runpy")
+        runpy.callAttr("run_module", "main", null,  "__main__")
     }
 
     private fun setupPythonWebView(
