@@ -61,7 +61,7 @@ html = """
 <body>
 <div class="header">
     <div class="top-bar">
-        Hello Human
+        EXAMPLE_APP_NAME
     </div>
 </div>
 <div class="content">

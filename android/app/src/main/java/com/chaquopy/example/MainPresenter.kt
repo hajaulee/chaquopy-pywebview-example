@@ -1,4 +1,4 @@
-package com.example.hello
+package com.chaquopy.example
 
 import android.annotation.SuppressLint
 import android.util.Log

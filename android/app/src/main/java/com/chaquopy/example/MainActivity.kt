@@ -1,4 +1,4 @@
-package com.example.hello
+package com.chaquopy.example
 
 import android.app.Activity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.hello
+package com.chaquopy.example
 
 import org.junit.Test
 
